@@ -19,11 +19,11 @@
 - **CMake**: 3.16+ (we have 3.29.2)
 - **Kokkos**: 4.4.01 (what we'll install)
 
-## Step-by-Step Build Instructions
+## Build Instructions
 
 ### Step 1: Load Required Modules
 
-If on an HPC system with environment modules, load the required modules:
+Load the required modules:
 
 ```bash
 # Load GCC compiler (if not using system default)
@@ -185,21 +185,6 @@ cd /home/akaushik/miniMD/kokkos
 - `-s 20`: Problem size (20×20×20 unit cells = 32,000 atoms)
 - `-n 100`: Number of timesteps
 
-**Expected Output:**
-```
-# Create System:
-# Done .... 
-# miniMD-Reference 1.2 (MPI+OpenMP) output ...
-# Run Settings: 
-        # MPI processes: 1
-        # Host Threads: 1
-        # Atoms: 32000
-        # System size: 33.59 33.59 33.59 (unit cells: 20 20 20)
-# Starting dynamics ...
-# Timestep T U P Time
-0 1.440000e+00 -6.773368e+00 -5.019707e+00  0.000
-100 7.310774e-01 -5.712185e+00 1.204501e+00  [time]
-```
 
 #### 4.3 Run with Multiple MPI Ranks
 
